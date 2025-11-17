@@ -1,0 +1,19 @@
+{
+  "pdf_path": "path/to/your/file.pdf",
+  "topic_order": ["ECONOMIC DEVELOPMENT", "AGRICULTURE"],
+  "manual_mappings": {
+    "1-5": {
+      "topic": "ECONOMIC DEVELOPMENT",
+      "subtopic": "Planning"
+    },
+    "6-10": {
+      "topic": "AGRICULTURE"
+    }
+  },
+  "matching_threshold": 70,
+  "llm_model": "gpt-4",
+  "temperature": 0.3,
+  "debug_mode": true,
+  "notes": "Edit this file to configure PDF processing. manual_mappings are optional hints for specific page ranges."
+}
+

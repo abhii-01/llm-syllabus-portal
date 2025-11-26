@@ -1,5 +1,7 @@
 # PDF Taxonomy Tagger
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/abhii-01/llm-syllabus-portal/blob/sample-check/pdf_taxonomy_tagger.ipynb)
+
 A system for automatically tagging PDF paragraphs with hierarchical taxonomy paths using LLM-based semantic matching.
 
 ## Overview
@@ -39,15 +41,23 @@ Open `pdf_taxonomy_tagger.ipynb` in Jupyter or Google Colab and run all cells to
 
 ### 3. Process a PDF
 
-Run the "Interactive Processing" cell and follow the prompts:
+**Option A: Quick Start (Recommended)**
 
+Go to Cell #10 and edit the PDF path:
+
+```python
+pdf_path = '/content/drive/MyDrive/economics1.pdf'  # ← Change this to your PDF path
 ```
-Enter PDF path: path/to/your/file.pdf
-Use config file? (y/n): n
-Matching threshold (0-100, default: 70): 70
-Debug mode? (y/n): y
-Proceed with processing? (y/n): y
-```
+
+Then run the cell - it automatically:
+- Mounts Google Drive (if needed)
+- Validates the file
+- Processes the PDF
+- Downloads results
+
+**Option B: Interactive Mode**
+
+Use Cell #11 if you prefer to be prompted for the path.
 
 ### 4. View Results
 
@@ -137,18 +147,43 @@ Perfect for creating topic-specific vector databases!
 
 ## Google Colab Usage
 
+### 🚀 **Instant Start (One Click)**
+
+Use this link to open directly in Colab:
+
+```
+https://colab.research.google.com/github/abhii-01/llm-syllabus-portal/blob/sample-check/pdf_taxonomy_tagger.ipynb
+```
+
+### 🔑 **Setup API Key**
+
 The notebook automatically detects Colab and provides three API key options:
 
-1. **Colab Secrets**: Store key in Colab's secret manager
+1. **Colab Secrets** (Recommended): 
+   - Click the 🔑 key icon in Colab sidebar
+   - Add secret: `OPENAI_API_KEY` = `sk-your-key`
+   - Toggle "Notebook access" ON
+
 2. **Google Drive**: Save `secrets.json` in your Drive at `/MyDrive/secrets.json`
+
 3. **Direct Input**: Enter key when prompted
 
-Clone your repo in Colab:
+### 📄 **Setup Your PDF**
 
+**Option 1: Use Google Drive (Recommended)**
+- Upload PDF to your Google Drive
+- In Cell #10, set: `pdf_path = '/content/drive/MyDrive/your_file.pdf'`
+- Run the cell - Drive mounts automatically!
+
+**Option 2: Upload Directly**
+- In Cell #10, uncomment the upload lines:
 ```python
-!git clone https://github.com/your-repo/llm-syllabus-portal.git
-%cd llm-syllabus-portal
+from google.colab import files
+uploaded = files.upload()
+pdf_path = list(uploaded.keys())[0]
 ```
+
+Then just run Cell #10 and you're done! 🎉
 
 ## Output Structure
 

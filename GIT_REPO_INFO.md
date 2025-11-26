@@ -3,12 +3,12 @@
 ## Repository Details
 
 **GitHub Repository:**
-- **URL:** `https://github.com/abhii-01/syllabus-portal.git`
+- **URL:** `https://github.com/abhii-01/llm-syllabus-portal.git`
 - **Owner:** `abhii-01`
-- **Repository Name:** `syllabus-portal`
+- **Repository Name:** `llm-syllabus-portal`
 
 **Local Path:**
-- `/Users/aadarsh/Documents/code/syllabus-portal`
+- `/Users/aadarsh/Documents/code/llm-syllabus-portal`
 
 ## Git Configuration
 
@@ -18,8 +18,8 @@
 
 **Remote:**
 - **Name:** `origin`
-- **Fetch URL:** `https://github.com/abhii-01/syllabus-portal.git`
-- **Push URL:** `https://github.com/abhii-01/syllabus-portal.git`
+- **Fetch URL:** `https://github.com/abhii-01/llm-syllabus-portal.git`
+- **Push URL:** `https://github.com/abhii-01/llm-syllabus-portal.git`
 
 ## Branch Structure
 
@@ -78,8 +78,8 @@ git push origin --delete feature-name
 
 To clone this repository in another location:
 ```bash
-git clone https://github.com/abhii-01/syllabus-portal.git
-cd syllabus-portal
+git clone https://github.com/abhii-01/llm-syllabus-portal.git
+cd llm-syllabus-portal
 ```
 
 ## Important Notes
